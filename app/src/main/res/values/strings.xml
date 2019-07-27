@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">HexagonWellness</string>
+    <string name="app_name">HexFit</string>
     <string name="title_activity_book_massage">BookMassage</string>
     <string name="title_activity_schedule_massage">ScheduleMassage</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>

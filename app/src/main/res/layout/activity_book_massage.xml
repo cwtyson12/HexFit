@@ -4,6 +4,157 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+
     tools:context=".BookMassage">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="50dp"
+        android:orientation="vertical"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="Name"
+                />
+            <EditText
+                android:id="@+id/txt_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:ems="10"
+                android:layout_marginRight="10dp"
+                android:inputType="textPersonName"
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="Email"
+                />
+            <EditText
+                android:id="@+id/txt_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="10dp"
+                android:ems="10"
+                android:inputType="textEmailAddress"
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="Desired Time"
+                />
+            <EditText
+                android:id="@+id/txt_desired_time"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="10dp"
+                android:ems="10"
+                android:inputType="text"
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="Number of sessions"
+                />
+            <EditText
+                android:id="@+id/txt_number_sessions"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="10dp"
+                android:ems="10"
+                android:inputType="textPersonName"
+                />
+        </LinearLayout>
+        <Button
+            android:id="@+id/btn_send"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Send Email" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_gravity="bottom"
+            android:layout_marginTop="170dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginBottom="30dp"
+
+
+            android:orientation="horizontal">
+            <ImageButton
+                android:id="@+id/btn_calendar"
+                android:layout_width="80dp"
+                android:layout_height="match_parent"
+                android:src="@drawable/ic_calendar"
+
+                />
+            <ImageButton
+                android:id="@+id/btn_book_massage"
+                android:layout_width="80dp"
+                android:layout_height="match_parent"
+                android:src="@drawable/ic_massage_table"
+
+                />
+            <ImageButton
+                android:id="@+id/btn_hour"
+                android:layout_width="80dp"
+                android:layout_height="match_parent"
+                android:src="@drawable/ic_action_name"
+
+                />
+            <ImageButton
+                android:id="@+id/btn_advice"
+                android:layout_width="80dp"
+                android:layout_height="match_parent"
+                android:src="@drawable/ic_blog"
+
+                />
+            <ImageButton
+                android:id="@+id/btn_recipe"
+                android:layout_width="80dp"
+                android:layout_height="match_parent"
+                android:src="@drawable/ic_recipes"
+
+                />
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
 
 </android.support.constraint.ConstraintLayout>

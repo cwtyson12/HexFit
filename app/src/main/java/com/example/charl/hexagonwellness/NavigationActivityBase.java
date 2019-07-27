@@ -1,6 +1,7 @@
 package com.example.charl.hexagonwellness;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -14,14 +15,21 @@ import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
+import android.widget.ListView;
+
+import java.util.Map;
 
 public class NavigationActivityBase extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
-
+    public DrawerLayout drawerLayout;
+    public ListView drawerList;
+    public String[] layers;
+    private ActionBarDrawerToggle drawerToggle;
+    private Map map;
     protected void onCreateDrawer() {
         //super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_navigation_base);
+        //setContentView(R.layout.activity_navigation_base);
         Toolbar toolbar = findViewById(R.id.toolbar);
         //setSupportActionBar(toolbar);
         FloatingActionButton fab = findViewById(R.id.fab);
@@ -39,6 +47,7 @@ public class NavigationActivityBase extends AppCompatActivity
         drawer.addDrawerListener(toggle);
         toggle.syncState();
         navigationView.setNavigationItemSelectedListener(this);
+
     }
 
     @Override
@@ -86,11 +95,14 @@ public class NavigationActivityBase extends AppCompatActivity
             Intent bookIntent = new Intent(this, BookMassage.class);
             startActivity(bookIntent);
         } else if (id == R.id.nav_hours) {
-
+            Intent hoursIntent = new Intent(this, Hours.class);
+            startActivity(hoursIntent);
         } else if (id == R.id.nav_blog) {
-
+            Intent blogIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://trueblue.intergraph.com/wellness/"));
+            startActivity(blogIntent);
         } else if (id == R.id.nav_recipes) {
-
+            Intent recipesIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://trueblue.intergraph.com/wellness/recipes.asp"));
+            startActivity(recipesIntent);
         }
 
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
