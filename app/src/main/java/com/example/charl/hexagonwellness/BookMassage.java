@@ -59,7 +59,7 @@ public class BookMassage extends AppCompatActivity {
         });
 
         final Button sendEmailButton = findViewById(R.id.btn_send);
-        recipeButton.setOnClickListener(new View.OnClickListener() {
+        sendEmailButton.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 Intent sendIntent = new Intent(Intent.ACTION_SEND);
                 final EditText et_name = findViewById(R.id.txt_name);
@@ -84,7 +84,7 @@ public class BookMassage extends AppCompatActivity {
 
                 sendIntent.setType("message/rfc822");
 
-
+                startActivity(Intent.createChooser(sendIntent, "Choose an email client"));
             }
         });
     }
